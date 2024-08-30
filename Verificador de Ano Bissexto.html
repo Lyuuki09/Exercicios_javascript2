@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        function ano(){
+            let entrada = parseInt(document.getElementById("data").value)
+
+            if ((entrada % 4 == 0) || (entrada % 100 == 0 && entrada %400 == 0 )) {
+                document.getElementById("resultado").innerHTML = "Esse ano é bissexto!"
+            }
+
+            else {
+                document.getElementById("resultado").innerHTML = "Esse ano não é bissexto"
+            }
+        }
+
+    </script>
+</head>
+
+<body>
+    
+    <input type="number" id="data" placeholder="Digite aqui o ano"/>
+    <button onclick="ano()">Verificador</button>
+    <div id="resultado"></div>
+
+</body>
+</html>

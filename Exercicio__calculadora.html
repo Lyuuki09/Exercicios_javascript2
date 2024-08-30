@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        function media(){
+            let prova1 = parseInt(document.getElementById("prova1").value)
+            let prova2 = parseInt(document.getElementById("prova2").value)
+            let prova3 = parseInt(document.getElementById("prova3").value)
+            let prova4 = parseInt(document.getElementById("prova4").value)
+            let texto=String("")
+            let media=parseFloat((prova1+prova2 +prova3+prova4)/4)
+            if(media>=7){
+                texto="aprovado"
+            }
+            else{
+                texto="reprovado"
+            }
+
+            document.getElementById("resultado").innerHTML="A sua média é " + media+ " e você esta "+ texto
+        }
+
+    </script>
+</head>
+<body>
+    <input type="number" id = "prova1" placeholder="Digite aqui a nota da primeira prova">
+    <input type="number" id = "prova2" placeholder="Digite aqui a nota da segunda prova">
+    <input type="number" id = "prova3" placeholder="Digite aqui a nota da terceira prova">
+    <input type="number" id = "prova4" placeholder="Digite aqui a nota da quarta prova">
+    <button onclick="media()" > Verificar</button>
+    <div id="resultado"></div>
+</body>
+</html>

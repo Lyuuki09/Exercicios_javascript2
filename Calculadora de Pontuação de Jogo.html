@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        function pontuacao(){
+            let num1 = parseInt(document.getElementById("pontos").value);
+            let texto = "";
+            switch(true){
+                case (num1>=0 && num1 < 200):
+                    texto = "Você é um iniciante";
+                    break;
+                case (num1>=pontuacao && num1 <500):
+                    texto = "Você é intermediário";
+                    break;
+                case (num1>=500 && num1 <1000):
+                    texto = "Você é avançado";
+                    break;
+                case (num1>=1000):
+                    texto = "Parebéns! Você é mestre";
+                    break;
+                default: 
+                texto = "Insira uma pontuação válida!";
+                break;
+            }
+                document.getElementById("resultado").innerHTML = texto
+            }
+    </script>
+</head>
+<body>
+    <input type="number" placeholder="Digite a sua pontuação!" id="pontos">
+    <button onclick="pontuacao()">Verificar</button>
+    <div id="resultado"></div>
+</body>
+</html>

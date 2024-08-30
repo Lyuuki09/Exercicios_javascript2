@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        function filmes() {
+            let idade=parseInt(document.getElementById("idade").value)
+            let texto=""
+            switch(true){
+                case(idade>=0 && idade<=12):
+                    texto="Animação, Aventura"
+                    break
+                case(idade>=13 && idade<=17):
+                    texto="Ação, Drama"
+                    break
+                case(idade>=18 && idade<=64):
+                    texto="Comédia, Suspense"
+                    break
+                default:
+                    texto="Romance, Documentário"
+                
+            }
+            document.getElementById("resultado").innerHTML="O tipo de filme indicado foi " + texto
+        }
+    </script>
+
+</head>
+<body>
+    <input placeholder="Digite aqui a sua idade" id="idade" type="number"/>
+    <button onclick="filmes()">Verificar</button>
+    <div id="resultado"></div>
+</body>
+</html>

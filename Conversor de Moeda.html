@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8" />
+    <title>title</title>
+    <script>
+        function conversor(){
+            let moeda = String(document.getElementById("moeda").value)
+            let valor = parseFloat(document.getElementById("valor").value)
+           
+
+            switch(moeda){
+                case("dolar"):
+                    valor=valor*5
+                    break
+                case("euro"):
+                valor=valor*5.5
+                    break
+                default:
+                    valor=valor*6
+                    break
+            }
+            document.getElementById("resultado").innerHTML="A conversão deu "+valor
+        }
+
+
+    </script>
+</head>
+<body>
+    <input type="number" id="valor" placeholder="Digite aqui o valor">
+    <label for="tipo">Tipo da Moeda</label>
+    <select id="moeda">
+        <option value="dolar">Dólar (USD)</option>
+        <option value="euro">Euro (EUR)</option>
+        <option value="libra">Libra Esterlina (GBP)</option>
+
+    </select>
+    <button onclick="conversor()">Verificar</button>
+    <div id="resultado"></div>
+</body>
+</html>

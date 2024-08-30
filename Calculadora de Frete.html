@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        function frete(){
+            let peso=parseFloat(document.getElementById("peso").value)
+            let zona =String(document.getElementById("opcao").value)
+            let preco=parseFloat(0)
+
+         switch(zona){
+
+            case("norte"):
+                switch(true){
+                    case(peso<=5):
+                        preco=15
+                        break
+                    default:
+                        preco=25
+                        break
+                     
+            }
+            break //esse daqui
+            case("sul"):
+            switch(true){
+                    case(peso<=5):
+                        preco=10
+                        break
+                    default:
+                        preco=20   
+                        break
+            }
+            break
+            case("centro"):
+                switch(true){
+                    case(peso<=5):
+                        preco=12
+                        break
+                default:
+                    preco=22
+                break    
+            }
+            break 
+         }
+            document.getElementById("resultado").innerHTML="O valor do frete deu " + preco
+        }
+    
+
+</script>
+</head>
+<body>
+    <input type="number" id="peso" placeholder="Digite aqui o peso">
+    <label for="Zona">Região</label>
+    <select id="opcao">
+        <option value="norte">Norte</option>
+        <option value="sul">Sul</option>
+        <option value="centro">Centro-oeste</option>
+
+    </select>
+    <button onclick="frete()">Verificar</button>
+    <div id="resultado"></div>
+</body>
+</html>

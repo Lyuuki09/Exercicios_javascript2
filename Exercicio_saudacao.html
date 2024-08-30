@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        function verificar() {
+            let hora = new Date().getHours()
+            let texto = ""
+
+            if (hora >= 5 && hora < 12) {
+                texto = "Bom dia!"
+            } else if (hora >= 12 && hora < 18) {
+                texto = "Boa tarde!"
+            } else {
+                texto = "Boa noite!"
+            }
+
+            document.getElementById("resultado").innerHTML = texto
+        }
+    </script>
+</head>
+<body>
+    <button onclick="verificar()" >verificar horário </button>
+    <div id="resultado"></div>
+</body>
+</html>

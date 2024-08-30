@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <script>
+        function gorjeta(){
+            let valor = parseFloat(document.getElementById("num1").value)
+            let  opcao = document.getElementById("opcao").value
+            let texto = ""
+            switch(opcao){
+                case "ruim":
+                    break
+
+           
+                case "bom": 
+                    valor = valor * 1.15
+                    break
+
+                case "otimo":
+                    valor = valor * 1.25
+                    break
+
+                default: valor = valor
+            }
+            document.getElementById("resultado").innerHTML = "Valor total " + valor.toFixed(2)
+        }
+    </script>
+
+</head>
+
+<body>
+    <input type="number" id="num1" placeholder="Insira o valor da compra">
+    <br>
+    <form>
+        <label for="qualidade">Qualidade</label>
+        <select id="opcao">
+            <option value="ruim">Ruim</option>
+            <option value="bom">Bom</option>
+            <option value="otimo">Ótimo</option>
+        </select>
+    </form>
+    <button onclick="gorjeta()">Verificar</button>
+    <div id="resultado"></div>
+</body>
+
+</html>
