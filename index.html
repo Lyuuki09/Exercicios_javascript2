@@ -1,20 +1,75 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <meta charset="UTF-8" />
+    <title>Validador de Senha</title>
     <link rel="stylesheet" href="styles.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Alata&display=swap" rel="stylesheet">
-</head>
+    <script>
+        function verificador() {
+            let senha = String(document.getElementById("senha").value);
+            let lista = senha.split("");
+            let texto = "";
+            pausa=false
 
+            if (lista.length < 8 || lista.length > 16) {
+                texto =texto+ "A senha deve conter entre 8 e 16 caracteres (possui " + lista.length + ")<br>";
+            }
+            if (senha === senha.toLowerCase()) {
+                texto =texto+ "A senha deve conter pelo menos uma letra maiúscula<br>";
+            }
+            for(let i=0;i<lista.length;i++){
+                if(!isNaN(lista[i])){
+                    break
+                }
+                else if(i==lista.length-1){
+                    texto=texto+"A senha deve conter pelo menos um número<br>"
+                }
+            
+        }
+        for(let i=0;i<lista.length;i++){
+            switch(lista[i]){
+                case("@"):
+                pausa=true
+                case("#"):
+                pausa=true
+                case("$"):
+                pausa=true
+                case("%"):
+                pausa=true
+                case("&"):
+                pausa=true
+                case("*"):
+                pausa=true
+                break
+             
+                    
+            }
+            if(pausa){
+                    break
+                }
+                else if(i==lista.length-1){
+                    texto=texto+"A senha deve conter pelo menos um caractere especial (@, #, $, %, &, *)"
+                }
+            
+        }
+    
+        document.getElementById("resultado").innerHTML = texto;
+    }
+    </script>
+</head>
 <header>
     <div class="fundo">
+
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M16 19l-7-7 7-7" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+   
         <a href="Jogo de Adivinhacao.html">Adivinhação</a>
         <div id="barra"></div>
-        <a href="Verificador de Ano Bissexto.html">Ano Bissexto</a>
+        <a href="Verificador de Ano Bissexto.html">Verificador de ano Bissexto</a>
         <div id="barra"></div>
         <a href="Calculadora de Frete.html">Média Escolar</a>
         <div id="barra"></div>
@@ -22,11 +77,25 @@
         <div id="barra"></div>
         <a href="Saudação de Acordo com a Hora.html">Saudação</a>
         <div id="barra"></div>
-        <a href="Verificador de Ano Bissexto.html">Verificador de Ano Bissexto</a>
+        <a href="index.html">Validador de Senha</a>
+
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M8 5l7 7-7 7" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+        </svg>
+        
     </div>
 </header>
-
-<body>
     
+<body>
+    <div class="wapper">
+        <div class="container">
+            <h1>Verificador de senhas</h1>
+            <input type="password" id="senha" placeholder="Digite aqui a sua senha">
+            <button onclick="verificador()" id="botao">Verificar</button>
+            <div id="resultado">Sua senha está forte? Teste logo acima</div>
+        </div>
+    </div>
+
+    <div class="footer">© Direitos reservados aos Leandrin de Recife e Chinco Winko</div>
 </body>
 </html>

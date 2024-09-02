@@ -8,6 +8,8 @@ body{
     margin: 0%;
 }
 
+
+
 .fundo{
     padding: 0%;
     border-radius: 50px; 
@@ -78,7 +80,7 @@ a:not(:hover){
     color: white;
   }
 
-  #botao, #senha{
+  #botao, #data{
     color: rgb(255, 255, 255);
     background-color: rgb(45, 41, 56);
     border-radius: 22px;
@@ -93,14 +95,28 @@ input::placeholder{
     outline: none;
 }
 
-#senha{
+svg:hover{
+  height: calc(24px * 1.5);
+  width: calc(24px * 1.5);
+  transition: 200ms;
+}
+
+svg:not(:hover){
+  height: 24px;
+  width: 24px;
+  transition: 200ms;
+}
+
+
+
+#data{
     width: 15vw;
     height: 5vh;
 }
 
 #botao{
-    width: 5vw;
-    height: 3vh;
+    width: 5.7vw;
+    height: 3.5vh;
 }
 
 /* Footer */
