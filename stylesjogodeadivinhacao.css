@@ -14,6 +14,7 @@ body{
     width: 97%;
     height: 7%;
     top: 20px;
+    position: absolute;
     display: flex;
     justify-content: space-evenly;  
     align-items: center;
@@ -47,9 +48,9 @@ a:not(:hover){
     font-family: "Alata", sans-serif;
     font-weight: 400;
     font-style: normal;
-}
+  }
 
-.wapper{
+  .wapper{
     display: flex;
     justify-content: center;
     align-items:center ;
@@ -57,9 +58,9 @@ a:not(:hover){
     width: 100vw;
     margin: 0;
     padding: 0;
-}
+  }
 
-.container{
+  .container{
     background-color: rgb(45, 41, 56);
     width: 40vw;
     height: 60vh;
@@ -67,14 +68,29 @@ a:not(:hover){
     display: flex;
     flex-direction: column;
     align-items: center;
-}
+    justify-content: space-around;
+  }
 
-h1{
+  h1{
     color: white;
-}
+  }
+  #resultado{
+    color: white;
+  }
 
-#resultado{
+  #botao, #numero{
+    color: rgb(255, 255, 255);
+    background-color: rgb(45, 41, 56);
+    border-radius: 22px;
+    text-decoration: none;
+    border: 1px solid white;
+  }
+
+input::placeholder{
+    text-align: center;
     color: white;
+    font-size: 17px;
+    outline: none;
 }
 
 svg:hover{
@@ -89,7 +105,15 @@ svg:not(:hover){
   transition: 200ms;
 }
 
+#numero{
+    width: 15vw;
+    height: 5vh;
+}
 
+#botao{
+    width: 5.7vw;
+    height: 3.5vh;
+}
 
 /* Footer */
 
@@ -103,44 +127,4 @@ svg:not(:hover){
     display: flex;
     align-items: center;
     justify-content: center;
-    ;
-}
-
-/* Footer */
-
-#numero{
-    width: 15vw;
-    height: 5vh;
-    color: rgb(255, 255, 255);
-    background-color: rgb(45, 41, 56);
-    border-radius: 22px;
-    text-decoration: none;
-    border: 1px solid white;
-}
-
-#botao{
-    width: 5.7vw;
-    height: 3.5vh;
-    color: rgb(255, 255, 255);
-    background-color: rgb(45, 41, 56);
-    border-radius: 22px;
-    text-decoration: none;
-    border: 1px solid white;
-}
-
-input::placeholder{
-    text-align: center;
-    color: white;
-    font-size: 17px;
-    outline: none;
-}
-
-#numero {
-    width: 15vw !important;
-    height: 5vh !important;
-    color: rgb(255, 255, 255) !important;
-    background-color: rgb(45, 41, 56) !important;
-    border-radius: 22px !important;
-    text-decoration: none !important;
-    border: 1px solid white !important;
 }

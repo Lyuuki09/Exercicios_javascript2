@@ -8,6 +8,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Alata&display=swap" rel="stylesheet">
     <script>
+       
         function verificador() {
             let senha = String(document.getElementById("senha").value);
             let lista = senha.split("");
@@ -58,15 +59,37 @@
     
         document.getElementById("resultado").innerHTML = texto;
     }
+
+    function olho(){
+        let input2 = document.getElementById("senha")
+        let olhoo = document.getElementById("olhinho")
+        
+        if(input2.type == "password"){
+            input2.type = 'text'
+            olhoo.style.backgroundImage = "url(olhobrancofechado.png)"
+        }
+
+        else{
+            input2.type = "password"
+            olhoo.style.backgroundImage = "url(olhobranco.png)"
+        }
+        
+    }
+
+    function trocar(){
+        let header = document.getElementsByClassName("fundo")
+        header.style.animation = 'header2 2s linear infinite' 
+
+    }
+
     </script>
 </head>
 <header>
     <div class="fundo">
 
-        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-            <path d="M16 19l-7-7 7-7" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-          </svg>
-   
+        <a href=""><svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path d="M16 19l-7-7 7-7" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+        </svg></a>
         <a href="Jogo de Adivinhacao.html">Adivinhação</a>
         <div id="barra"></div>
         <a href="Verificador de Ano Bissexto.html">Verificador de ano Bissexto</a>
@@ -78,10 +101,10 @@
         <a href="Saudação de Acordo com a Hora.html">Saudação</a>
         <div id="barra"></div>
         <a href="index.html">Validador de Senha</a>
-
-        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-            <path d="M8 5l7 7-7 7" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+        <a href=""><svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" id="setadireita" onclick="trocar()">
+        <path d="M8 5l7 7-7 7" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
         </svg>
+        </a>
         
     </div>
 </header>
@@ -90,10 +113,14 @@
     <div class="wapper">
         <div class="container">
             <h1>Verificador de senhas</h1>
-            <input type="password" id="senha" placeholder="Digite aqui a sua senha">
+            <div class="olhao">
+                <input type="password" id="senha" placeholder="Digite aqui a sua senha"></input>
+                <button onclick="olho()" id="olhinho"></button>
+            </div>
             <button onclick="verificador()" id="botao">Verificar</button>
             <div id="resultado">Sua senha está forte? Teste logo acima</div>
         </div>
+        
     </div>
 
     <div class="footer">© Direitos reservados aos Leandrin de Recife e Chinco Winko</div>

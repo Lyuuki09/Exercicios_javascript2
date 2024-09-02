@@ -13,6 +13,7 @@
             let entrada = parseInt(document.getElementById("data").value)
 
             if (isNaN (entrada)){
+                document.getElementById("numero").value = ""
                 document.getElementById("resultado").innerHTML = "Por favor, insira uma data válida"
             }
 
