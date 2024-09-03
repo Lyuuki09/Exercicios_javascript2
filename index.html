@@ -7,7 +7,72 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Alata&display=swap" rel="stylesheet">
+
+</head>
+<header id="header">
+    <div id="fundo2">
+
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" onclick="trocar2()">
+        <path d="M16 19l-7-7 7-7" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+        </svg>
+        <a id="teste1" href="Jogo de Adivinhacao.html">Adivinasdasdhação</a>
+        <div id="barra"></div>
+        <a href="Verificador de Ano Bissexto.html">Verificadoasdasdr de ano Bissexto</a>
+        <div id="barra"></div>
+        <a href="Calculadora de Frete.html">Média Escolaasdasddsadr</a>
+        <div id="barra"></div>
+        <a href="Exercicio_gorjeta.html">Calculadora de asdasdsaGorjeta</a>
+        <div id="barra"></div>
+        <a href="Saudação de Acordo com a Hora.html">Saudasdasdasdasação</a>
+        <div id="barra"></div>
+        <a href="index.html">Validador de Senasdasdsdasadaha</a>
+        
+        
+        
+    </div>
+
+    <div id="fundo">
+
+        
+        <a id="teste1" href="Jogo de Adivinhacao.html">Adivinhação</a>
+        <div id="barra"></div>
+        <a href="Verificador de Ano Bissexto.html">Verificador de ano Bissexto</a>
+        <div id="barra"></div>
+        <a href="Calculadora de Frete.html">Média Escolar</a>
+        <div id="barra"></div>
+        <a href="Exercicio_gorjeta.html">Calculadora de Gorjeta</a>
+        <div id="barra"></div>
+        <a href="Saudação de Acordo com a Hora.html">Saudação</a>
+        <div id="barra"></div>
+        <a href="index.html">Validador de Senha</a>
+         <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" id="setadireita" onclick="trocar()">
+        <path d="M8 5l7 7-7 7" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+        </svg>
+        
+        
+    </div>
+</header>
+    
+<body>
+    <div class="wapper">
+        <div class="container">
+            <h1>Verificador de senhas</h1>
+            <div class="olhao">
+                <input type="password" id="senha" placeholder="Digite aqui a sua senha"></input>
+                <button onclick="olho()" id="olhinho"></button>
+            </div>
+            <button onclick="verificador()" id="botao">Verificar</button>
+            <div id="resultado">Sua senha está forte? Teste logo acima</div>
+        </div>
+        
+    </div>
+
+    <div class="footer">© Direitos reservados aos Leandrin de Recife e Chinco Winko</div>
     <script>
+        let fundo=document.getElementById('fundo')
+        let fundo2=document.getElementById('fundo2')
+       
+       
        
         function verificador() {
             let senha = String(document.getElementById("senha").value);
@@ -75,54 +140,40 @@
         }
         
     }
+let contador=0
+    function trocar() {
+        fundo2.classList.remove('retorno')
+        fundo.classList.remove('retorno')
+        fundo2.classList.remove('movesquerda')
 
-    function trocar(){
-        let header = document.getElementsByClassName("fundo")
-        header.style.animation = 'header2 2s linear infinite' 
+        contador++
+    fundo.classList.add('hidden', 'movdireita')
 
-    }
+    fundo.classList.remove('visible')
 
-    </script>
-</head>
-<header>
-    <div class="fundo">
-
-        <a href=""><svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-        <path d="M16 19l-7-7 7-7" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-        </svg></a>
-        <a href="Jogo de Adivinhacao.html">Adivinhação</a>
-        <div id="barra"></div>
-        <a href="Verificador de Ano Bissexto.html">Verificador de ano Bissexto</a>
-        <div id="barra"></div>
-        <a href="Calculadora de Frete.html">Média Escolar</a>
-        <div id="barra"></div>
-        <a href="Exercicio_gorjeta.html">Calculadora de Gorjeta</a>
-        <div id="barra"></div>
-        <a href="Saudação de Acordo com a Hora.html">Saudação</a>
-        <div id="barra"></div>
-        <a href="index.html">Validador de Senha</a>
-        <a href=""><svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" id="setadireita" onclick="trocar()">
-        <path d="M8 5l7 7-7 7" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-        </svg>
-        </a>
-        
-    </div>
-</header>
+    fundo2.classList.add('visible','movdireita')
+    fundo2.style.transform='translateX(1376.420px)'
+    fundo2.classList.remove('hidden')
+   
+        fundo2.classList.add('movdireita')
     
-<body>
-    <div class="wapper">
-        <div class="container">
-            <h1>Verificador de senhas</h1>
-            <div class="olhao">
-                <input type="password" id="senha" placeholder="Digite aqui a sua senha"></input>
-                <button onclick="olho()" id="olhinho"></button>
-            </div>
-            <button onclick="verificador()" id="botao">Verificar</button>
-            <div id="resultado">Sua senha está forte? Teste logo acima</div>
-        </div>
-        
-    </div>
+}
 
-    <div class="footer">© Direitos reservados aos Leandrin de Recife e Chinco Winko</div>
+    function trocar2(){
+fundo2.classList.remove('movdireita')
+    
+    fundo2.classList.add('hidden','movesquerda')
+
+    fundo2.classList.remove('visible')
+
+    fundo.classList.add('visible', 'retorno')
+
+    fundo.classList.remove('hidden')
+       
+
+         
+        
+    }
+    </script>
 </body>
 </html>

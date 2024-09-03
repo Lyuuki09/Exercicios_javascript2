@@ -7,8 +7,11 @@ body{
     width: 100vw;
     margin: 0%;
 }
-
-.fundo{
+#fundo2{
+  left:-1340.420px ;
+}
+#fundo,#fundo2{
+  
     padding: 0%;
     border-radius: 50px; 
     width: 97%;
@@ -19,6 +22,60 @@ body{
     justify-content: space-evenly;  
     align-items: center;
     background-color: rgb(45, 41, 56);
+    transition:opacity 3s ease-out ,visibility 1s ease-out ,transform 3s ease-out ;
+    
+}
+.hidden{
+ 
+  
+ 
+ 
+ opacity: 0;
+ visibility: hidden; 
+}
+.movdireita{
+  transform: translateX(1376.420px);
+}
+
+.movesquerda{
+  transform: translateX(-1376.420px);
+}
+.retorno{
+  transform: translateX(0);
+}
+
+header{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.no-display {
+  display: none;
+}
+
+
+
+.visible{
+
+  opacity: 1;
+  visibility:visible;
+  
+}
+
+
+.mover{
+  animation: animacao1 5s forwards;
+}
+@keyframes animacao18{
+    0%{
+      transform: translateX(0);
+    }
+
+    100%{
+      transform: translateX(700px);
+    }
+
+  
 }
 
 a{
@@ -112,6 +169,10 @@ svg:not(:hover){
     font-size: 20px;
 }
 
+#senha::placeholder{
+
+}
+
 #botao{
     width: 7vw;
     height: 5vh;
@@ -188,10 +249,6 @@ svg:not(:hover){
   animation: name duration timing-function delay iteration-count direction fill-mode;
 }
 
-@keyframes header2{
-  0%{transform: translateX(0px);
-  background-color: red;}
-  100%{transform: translateX(100px);
-  background-color: green;}
+.animacao{
+  transform: translateX(300px);
 }
-
