@@ -9,28 +9,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Alata&display=swap" rel="stylesheet">
 
 </head>
-<header id="header">
-    <div id="fundo2">
-
-        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" onclick="trocar2()">
-        <path d="M16 19l-7-7 7-7" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-        </svg>
-        <a id="teste1" href="Jogo de Adivinhacao.html">Adivinasdasdhação</a>
-        <div id="barra"></div>
-        <a href="Verificador de Ano Bissexto.html">Verificadoasdasdr de ano Bissexto</a>
-        <div id="barra"></div>
-        <a href="Calculadora de Frete.html">Média Escolaasdasddsadr</a>
-        <div id="barra"></div>
-        <a href="Exercicio_gorjeta.html">Calculadora de asdasdsaGorjeta</a>
-        <div id="barra"></div>
-        <a href="Saudação de Acordo com a Hora.html">Saudasdasdasdasação</a>
-        <div id="barra"></div>
-        <a href="index.html">Validador de Senasdasdsdasadaha</a>
-        
-        
-        
-    </div>
-
+<header>
     <div id="fundo">
 
         
@@ -45,9 +24,30 @@
         <a href="Saudação de Acordo com a Hora.html">Saudação</a>
         <div id="barra"></div>
         <a href="index.html">Validador de Senha</a>
-         <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" id="setadireita" onclick="trocar()">
+         <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" id="setadireita" onclick="movdireita()">
         <path d="M8 5l7 7-7 7" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
         </svg>
+        
+        
+    </div>
+
+    <div id="fundo2">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" id="setaesquerda" onclick="movesquerda()">
+            <path d="M16 5l-7 7 7 7" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+        </svg>
+        
+        <a id="teste1" href="Jogo de Adivinhacao.html">Adivinhação</a>
+        <div id="barra"></div>
+        <a href="Verificador de Ano Bissexto.html">Veriasdaasdsasdficador de ano Bissexto</a>
+        <div id="barra"></div>
+        <a href="Calculadora de Frete.html">Média Escolar</a>
+        <div id="barra"></div>
+        <a href="Exercicio_gorjeta.html">Calculadora de Gorjeta</a>
+        <div id="barra"></div>
+        <a href="Saudação de Acordo com a Hora.html">Saudação</a>
+        <div id="barra"></div>
+        <a href="index.html">Validador de Senha</a>
+        
         
         
     </div>
@@ -69,9 +69,8 @@
 
     <div class="footer">© Direitos reservados aos Leandrin de Recife e Chinco Winko</div>
     <script>
-        let fundo=document.getElementById('fundo')
-        let fundo2=document.getElementById('fundo2')
-       
+        const fundo=document.getElementById('fundo')
+        const fundo2=document.getElementById('fundo2')
        
        
         function verificador() {
@@ -140,39 +139,19 @@
         }
         
     }
-let contador=0
-    function trocar() {
-        fundo2.classList.remove('retorno')
-        fundo.classList.remove('retorno')
-        fundo2.classList.remove('movesquerda')
+    function movdireita(){
 
-        contador++
-    fundo.classList.add('hidden', 'movdireita')
+        fundo.style.transform='translateX(100%)'
+        fundo.style.opacity='0'
+        fundo2.style.transform='translateX(100%)'
+        fundo2.style.opacity='1'
 
-    fundo.classList.remove('visible')
-
-    fundo2.classList.add('visible','movdireita')
-    fundo2.style.transform='translateX(1376.420px)'
-    fundo2.classList.remove('hidden')
-   
-        fundo2.classList.add('movdireita')
-    
-}
-
-    function trocar2(){
-fundo2.classList.remove('movdireita')
-    
-    fundo2.classList.add('hidden','movesquerda')
-
-    fundo2.classList.remove('visible')
-
-    fundo.classList.add('visible', 'retorno')
-
-    fundo.classList.remove('hidden')
-       
-
-         
-        
+    }
+    function movesquerda(){
+        fundo2.style.transform='translateX(0%)'
+        fundo2.style.opacity='0'
+        fundo.style.transform='translateX(0%)'
+        fundo.style.opacity='1'
     }
     </script>
 </body>
