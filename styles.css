@@ -139,6 +139,7 @@ svg:not(:hover){
     width: 7vw;
     height: 5vh;
     font-size: 17px;
+    
 }
 
 #botao:hover{
@@ -213,4 +214,27 @@ svg:not(:hover){
 
 .animacao{
   transform: translateX(300px);
+}
+
+#data, #peso, #pontos, #idade, #valor, #prova1, #prova2, #prova3, #prova4, #num1, #numero{
+  color: rgb(255, 255, 255);
+  background-color: rgb(45, 41, 56);
+  border-radius: 22px;
+  text-decoration: none;
+  border: 1px solid white;
+  width: 15vw;
+  height: 5vh;
+  text-align: center;
+  font-size: 20px;
+}
+
+select,button{
+  width: 7vw;
+    height: 3vh;
+    font-size: 17px;
+    color: rgb(255, 255, 255);
+    background-color: rgb(45, 41, 56);
+    border-radius: 22px;
+    text-decoration: none;
+    border: 1px solid white;
 }

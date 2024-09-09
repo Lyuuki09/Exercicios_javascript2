@@ -4,10 +4,69 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <link rel="stylesheet" href="stylesjogodeadivinhacao.css">
+    <link rel="stylesheet" href="styles.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Alata&display=swap" rel="stylesheet">
+    
+
+</head>
+
+<header>
+    <div id="fundo">
+
+        
+        <a id="teste1" href="Jogo de Adivinhacao.html">Adivinhação</a>
+        <div id="barra"></div>
+        <a href="Verificador de Ano Bissexto.html">Verificador de ano Bissexto</a>
+        <div id="barra"></div>
+        <a href="Calculadora de Frete.html">Média Escolar</a>
+        <div id="barra"></div>
+        <a href="Exercicio_gorjeta.html">Calculadora de Gorjeta</a>
+        <div id="barra"></div>
+        <a href="Saudação de Acordo com a Hora.html">Saudação</a>
+        <div id="barra"></div>
+        <a href="index.html">Validador de Senha</a>
+         <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" id="setadireita" onclick="movdireita()">
+        <path d="M8 5l7 7-7 7" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+        </svg>
+        
+        
+    </div>
+
+    <div id="fundo2">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" id="setaesquerda" onclick="movesquerda()">
+            <path d="M16 5l-7 7 7 7" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+        </svg>
+        
+        <a id="teste1" href="">Jogo da forca</a>
+        <div id="barra"></div>
+        <a href="Classificação de Filmes.html">Classificação de Filmes</a>
+        <div id="barra"></div>
+        <a href="Calculadora de Frete.html">Calculadora de Frete</a>
+        <div id="barra"></div>
+        <a href="Calculadora de Pontuação de Jogo.html">Calculadora de Pontuação de Jogo</a>
+        <div id="barra"></div>
+        <a href="recomendacaoderoupa.html">Recomendações de Roupas</a>
+        <div id="barra"></div>
+        <a href="Conversor de Moeda.html">Conversor de Moeda</a>
+        
+        
+        
+    </div>
+</header>
+
+<body>
+    <div class="wapper">
+        <div class="container">
+            <h1>Jogo de Adivinhação</h1>
+            <input type="text" placeholder="Digite aqui seu número" id="numero"></input>
+            <button onclick="random()" id="botao">Verificar</button>
+            <div id="resultado">Tente adivinhar o número em que estou pensando (de 1 a 10).</div>
+        </div>    
+    </div>
+    <div class="footer">© Direitos reservados aos Leandrin de Recife e Chinco Winko</div>
+
     <script>
         function random(){
             let num1 = parseInt(document.getElementById("numero").value)
@@ -32,46 +91,22 @@
 
         }
 
+        function movdireita(){
+
+        fundo.style.transform='translateX(100%)'
+        fundo.style.opacity='0'
+        fundo2.style.transform='translateX(100%)'
+        fundo2.style.opacity='1'
+
+        }
+        function movesquerda(){
+        fundo2.style.transform='translateX(0%)'
+        fundo2.style.opacity='0'
+        fundo.style.transform='translateX(0%)'
+        fundo.style.opacity='1'
+        }
+
 
     </script>
-
-</head>
-
-<header>
-    <div class="fundo">
-
-        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-            <path d="M16 19l-7-7 7-7" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-          </svg>
-   
-        <a href="Jogo de Adivinhacao.html">Adivinhação</a>
-        <div id="barra"></div>
-        <a href="Verificador de Ano Bissexto.html">Verificador de ano Bissexto</a>
-        <div id="barra"></div>
-        <a href="Calculadora de Frete.html">Média Escolar</a>
-        <div id="barra"></div>
-        <a href="Exercicio_gorjeta.html">Calculadora de Gorjeta</a>
-        <div id="barra"></div>
-        <a href="Saudação de Acordo com a Hora.html">Saudação</a>
-        <div id="barra"></div>
-        <a href="index.html">Validador de Senha</a>
-
-        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-            <path d="M8 5l7 7-7 7" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-        </svg>
-        
-    </div>
-</header>
-
-<body>
-    <div class="wapper">
-        <div class="container">
-            <h1>Jogo de Adivinhação</h1>
-            <input type="text" placeholder="Digite aqui seu número" id="numero"></input>
-            <button onclick="random()" id="botao">Verificar</button>
-            <div id="resultado">Tente adivinhar o número em que estou pensando (de 1 a 10).</div>
-        </div>    
-    </div>
-    <div class="footer">© Direitos reservados aos Leandrin de Recife e Chinco Winko</div>
 </body>
 </html>

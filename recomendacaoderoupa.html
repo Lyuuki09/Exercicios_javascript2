@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Roupas</title>
+</head>
+<body>
+    <h1>Qual roupa usar hoje?</h1>
+    <p>Primeiro informe qual a temperatura de hoje em graus Celsius:</p>
+    <input type="number" id="GrausCelcius">
+    <button onclick="funcao()">A roupa será:</button>
+    <div id="clima"></div>
+
+    <script>
+        function funcao(){
+            const temperatura = parseInt(document.getElementById("GrausCelcius").value);
+    
+            let mensagem = "";
+    
+            switch (true){
+                case (temperatura < 15): 
+                    mensagem = "Aconselhamos a usar Casaco e Luvas.";
+                    break;
+    
+                case (temperatura >= 15 && temperatura < 25): 
+                    mensagem = "Use jaqueta e cachecol por perto para se prevenir.";
+                    break;
+    
+                case (temperatura >= 25): 
+                    mensagem = "Sorria, está calor, use roupas leves como camiseta e chapéu.";
+                    break;
+            
+                default:
+                    mensagem = "Por favor, informe uma temperatura válida.";
+                    break;
+            }
+            document.getElementById("clima").textContent = mensagem;
+        }
+
+        function movdireita(){
+
+        fundo.style.transform='translateX(100%)'
+        fundo.style.opacity='0'
+        fundo2.style.transform='translateX(100%)'
+        fundo2.style.opacity='1'
+
+        }
+        function movesquerda(){
+        fundo2.style.transform='translateX(0%)'
+        fundo2.style.opacity='0'
+        fundo.style.transform='translateX(0%)'
+        fundo.style.opacity='1'
+        }
+    </script>
+</body>
+</html>
