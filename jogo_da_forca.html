@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="jogodaforca.css">
+    <title>Jogo da Forca</title>
+    
+</head>
+
+<header>
+    <div id="fundo">
+
+        
+        <a id="teste1" href="Jogo de Adivinhacao.html">Adivinhação</a>
+        <div id="barra"></div>
+        <a href="Verificador de Ano Bissexto.html">Verificador de ano Bissexto</a>
+        <div id="barra"></div>
+        <a href="Calculadora de Frete.html">Média Escolar</a>
+        <div id="barra"></div>
+        <a href="Exercicio_gorjeta.html">Calculadora de Gorjeta</a>
+        <div id="barra"></div>
+        <a href="Saudação de Acordo com a Hora.html">Saudação</a>
+        <div id="barra"></div>
+        <a href="index.html">Validador de Senha</a>
+         <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" id="setadireita" onclick="movdireita()">
+        <path d="M8 5l7 7-7 7" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+        </svg>
+        
+        
+    </div>
+
+    <div id="fundo2">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" id="setaesquerda" onclick="movesquerda()">
+            <path d="M16 5l-7 7 7 7" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+        </svg>
+        
+        <a id="teste1" href="">Jogo da forca</a>
+        <div id="barra"></div>
+        <a href="Classificação de Filmes.html">Classificação de Filmes</a>
+        <div id="barra"></div>
+        <a href="Calculadora de Frete.html">Calculadora de Frete</a>
+        <div id="barra"></div>
+        <a href="Calculadora de Pontuação de Jogo.html">Calculadora de Pontuação de Jogo</a>
+        <div id="barra"></div>
+        <a href="recomendacaoderoupa.html">Recomendações de Roupas</a>
+        <div id="barra"></div>
+        <a href="Conversor de Moeda.html">Conversor de Moeda</a>
+        
+        
+        
+    </div>
+</header>
+
+<body>
+<div class="wapper">
+    <div class="container">
+            <div id="container-palavra">
+                <div id="palavra"></div>
+            </div>
+            <div id="containerAceitar">
+                <h1>Bem-vindo ao Jogo da Forca</h1>
+                <p>As regras do jogo são simples:</p>
+                <ul>
+                    <li>Digite uma letra por vez</li>
+                    <li>Você só poderá errar XX vezes</li>
+                    <li>Caso queira arriscar acertar a palavra, o erro fará perder o jogo e o acerto a ganhar</li>
+                    <li>Não há diferença entre letras maiúsculas e minúsculas</li>
+                </ul>
+                <button id="jogar" onclick="sumir()">Vamos jogar</button>
+                <button id="termos" onclick="aparecer()">Ler termos e serviços</button>
+                <div id="containertermo">
+                    Não temos termos e serviços XD
+                    <button id="voltar" onclick="sumirtermo()">Voltar</button>
+                </div>
+            </div>
+            <div id="container-central">
+                <div id="container-vitoria">
+                    <h2>Parábens você venceu o jogo</h2>
+                    <div id="container-imgvitoria"></div>
+                    
+                </div>
+                <div id="container-derrota">
+                    <h2>infelizmente você perdeu no jogo</h2>
+                    <div id="container-imgderrota"></div>
+                </div>
+                <div id="container-info">
+                    <h1>Tentativas</h1>
+                    <p id="tentativas"></p>
+                    <div>Letras Corretas</div>
+                    <div id="Letra-Correta"></div>
+                    <div>Letras erradas</div>
+                    <div id="Letra-Errada"></div>
+                    <div id="container-forca"></div>
+                </div>
+                <div id="container-digitar">   
+                    <p id="texto">Digite primeiro a palavra secreta</p>
+                    
+                    <input type="text" id="chute" placeholder="Digite nesse campo"/>
+                    <button id="verificar" onclick="verificar();limparInput()">Verificar</button>
+                </div>
+            </div>
+    </div>
+</div>
+    <div class="footer">© Direitos reservados aos Leandrin de Recife e Chinco Winko</div>
+    <script src="jogodaforca.js"></script>
+
+    <script>
+        function movdireita(){
+
+        fundo.style.transform='translateX(100%)'
+        fundo.style.opacity='0'
+        fundo2.style.transform='translateX(100%)'
+        fundo2.style.opacity='1'
+
+        }
+        function movesquerda(){
+        fundo2.style.transform='translateX(0%)'
+        fundo2.style.opacity='0'
+        fundo.style.transform='translateX(0%)'
+        fundo.style.opacity='1'
+        }
+    </script>
+</body>
+</html>

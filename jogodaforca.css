@@ -1,0 +1,203 @@
+
+#palavra {
+    font-size: 60px;
+    text-align: center;
+}
+
+
+#containerAceitar {
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    height: 500px;
+    width: 400px;
+    background-color: rgb(218,108,69);
+    left: 710px;
+    border-radius: 25px;
+}
+
+
+#containerAceitar.hidden {
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 200ms ease-out, visibility 200ms ease-out;
+}
+
+
+#containertermo {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    width: 400px;
+    height: 500px;
+    background-color: rgb(255, 108, 11);
+    text-align: center;
+    font-size: 25px;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 200ms ease-out, visibility 200ms ease-out;
+    position: absolute;
+    border-radius:25px ;
+}
+
+#containertermo.visible {
+    opacity: 1;
+    visibility: visible;
+}
+
+#jogar, #termos, #voltar {
+    margin: 0 auto;
+    width: 60%;
+    height: 15%;
+    outline: none;
+    border-radius: 25px;
+    border: 1px solid black;
+}
+#container-digitar {
+    width:70vw;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+#container-central {
+    width:100vw;
+    height: 75%;
+    
+    display: flex;
+    align-items: center;
+    
+}
+#container-info{
+    width: 25%;
+    height: 100%;
+    
+    text-align: center;
+
+}
+#container-info p{
+    font-size: 50px;
+}
+body {
+    width: 100vw;
+    height: 100vh;
+    margin: 0;
+    padding: 0;
+    
+    
+}
+body::before{
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none; 
+    z-index: -3;
+}
+
+#bodyfundo{
+    z-index: -999;
+    position: absolute;
+    width: 100vw;
+    height: 100vh;
+    background-image: url('img/WhatsApp\ Image\ 2024-08-29\ at\ 16.27.25.jpeg');
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+#container-forca{
+    width: 100%;
+    height: 20%;
+    background-color: rebeccapurple;
+}
+#texto{
+font-size: 30px;
+
+}
+#texto.hidden{
+    visibility: hidden;
+    opacity: 0;
+}
+#chute{
+    outline: none;
+    width: 60%;
+    height: 30%;
+    border-radius: 25px;
+    border: none;
+}
+#chute::placeholder{
+    text-align: center;
+    font-size: 40px;
+}
+
+#chute:focus{
+    font-size: 40px;
+}
+#chute:not(:focus){
+    font-size: 40px;
+}
+#verificar{
+    outline: none;
+    width: 30%;
+    height: 20%;
+    border-radius: 25px;
+    border: none;
+}
+h2{
+    text-align: center;
+    font-size: 25px;
+}
+#container-vitoria {
+    background-color: red;
+    width: 500px;
+    height: 500px;
+    position: absolute;
+    left: 710px;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 200ms ease-out, visibility 200ms ease-out;
+    border: 1px solid black ;
+    border-radius:25px ;
+}
+
+#container-vitoria.visible {
+    opacity: 1;
+    visibility: visible;
+    
+}
+#container-imgvitoria{
+    margin: 0 auto;
+    background-repeat: no-repeat;
+    background-size: contain;
+    width: 100%;
+    height: 80%;
+    background-image:url('img/Joinha.jpg');
+}
+#container-derrota{
+    background-color: rgb(5, 122, 255);
+    width: 500px;
+    height: 500px;
+    position: absolute;
+    left: 710px;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 200ms ease-out, visibility 200ms ease-out;
+    border: 1px solid black ;
+    border-radius:25px ;
+}
+#container-imgderrota{
+    margin: 0 auto;
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: 50%;
+    width: 100%;
+    height: 80%;
+    background-image:url('img/emojiTriste.png');
+}
+#container-derrota.visible {
+    opacity: 1;
+    visibility: visible;
+}
