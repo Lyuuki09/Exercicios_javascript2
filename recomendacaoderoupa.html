@@ -4,14 +4,66 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Roupas</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Alata&display=swap" rel="stylesheet">
 </head>
-<body>
-    <h1>Qual roupa usar hoje?</h1>
-    <p>Primeiro informe qual a temperatura de hoje em graus Celsius:</p>
-    <input type="number" id="GrausCelcius">
-    <button onclick="funcao()">A roupa será:</button>
-    <div id="clima"></div>
 
+<header>
+    <div id="fundo">
+
+        
+        <a id="teste1" href="Jogo de Adivinhacao.html">Adivinhação</a>
+        <div id="barra"></div>
+        <a href="Verificador de Ano Bissexto.html">Verificador de ano Bissexto</a>
+        <div id="barra"></div>
+        <a href="Calculadora de Frete.html">Média Escolar</a>
+        <div id="barra"></div>
+        <a href="Exercicio_gorjeta.html">Calculadora de Gorjeta</a>
+        <div id="barra"></div>
+        <a href="Exercicio_saudacao.html">Saudação</a>
+        <div id="barra"></div>
+        <a href="index.html">Validador de Senha</a>
+         <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" id="setadireita" onclick="movdireita()">
+        <path d="M8 5l7 7-7 7" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+        </svg>
+        
+        
+    </div>
+
+    <div id="fundo2">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" id="setaesquerda" onclick="movesquerda()">
+            <path d="M16 5l-7 7 7 7" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+        </svg>
+        
+        <a id="teste1" href="">Jogo da forca</a>
+        <div id="barra"></div>
+        <a href="Classificação de Filmes.html">Classificação de Filmes</a>
+        <div id="barra"></div>
+        <a href="Calculadora de Frete.html">Calculadora de Frete</a>
+        <div id="barra"></div>
+        <a href="Calculadora de Pontuação de Jogo.html">Calculadora de Pontuação de Jogo</a>
+        <div id="barra"></div>
+        <a href="recomendacaoderoupa.html">Recomendações de Roupas</a>
+        <div id="barra"></div>
+        <a href="Conversor de Moeda.html">Conversor de Moeda</a>
+        
+        
+        
+    </div>
+</header>
+
+<body>
+    <div class="wapper">
+        <div class="container">
+            <h1>Qual roupa usar hoje?</h1>
+            <input type="number" id="GrausCelcius">
+            <button onclick="funcao()" id="botao">Verificar</button>
+            <div id="resultado">informe acima qual a temperatura em graus Celsius</div>
+        </div>
+    </div>
+    <div class="footer">© Direitos reservados aos Leandrin de Recife e Chinco Winko</div>
     <script>
         function funcao(){
             const temperatura = parseInt(document.getElementById("GrausCelcius").value);
@@ -35,7 +87,7 @@
                     mensagem = "Por favor, informe uma temperatura válida.";
                     break;
             }
-            document.getElementById("clima").textContent = mensagem;
+            document.getElementById("resultado").textContent = mensagem;
         }
 
         function movdireita(){
@@ -53,5 +105,6 @@
         fundo.style.opacity='1'
         }
     </script>
+
 </body>
 </html>

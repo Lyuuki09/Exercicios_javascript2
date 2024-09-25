@@ -130,3 +130,4 @@ function verificar(){
         derrota.classList.add('visible')
     }
 }
+

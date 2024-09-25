@@ -67,6 +67,7 @@ a:not(:hover){
     font-family: "Alata", sans-serif;
     font-weight: 400;
     font-style: normal;
+    color: white;
   }
 
   .wapper{
@@ -90,7 +91,7 @@ a:not(:hover){
     justify-content: space-around;
   }
 
-  h1{
+  h1, p{
     color: white;
   }
   #resultado{
@@ -216,7 +217,7 @@ svg:not(:hover){
   transform: translateX(300px);
 }
 
-#data, #peso, #pontos, #idade, #valor, #prova1, #prova2, #prova3, #prova4, #num1, #numero{
+#data, #peso, #pontos, #idade, #valor, #prova1, #prova2, #prova3, #prova4, #num1, #numero, #GrausCelcius{
   color: rgb(255, 255, 255);
   background-color: rgb(45, 41, 56);
   border-radius: 22px;
@@ -236,5 +237,5 @@ select,button{
     background-color: rgb(45, 41, 56);
     border-radius: 22px;
     text-decoration: none;
-    border: 1px solid white;
+    border: 2px solid white;
 }

@@ -5,6 +5,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="styles.css">
     <link rel="stylesheet" href="jogodaforca.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Alata&display=swap" rel="stylesheet">
     <title>Jogo da Forca</title>
     
 </head>
@@ -21,7 +24,7 @@
         <div id="barra"></div>
         <a href="Exercicio_gorjeta.html">Calculadora de Gorjeta</a>
         <div id="barra"></div>
-        <a href="Saudação de Acordo com a Hora.html">Saudação</a>
+        <a href="Exercicio_saudacao.html">Saudação</a>
         <div id="barra"></div>
         <a href="index.html">Validador de Senha</a>
          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" id="setadireita" onclick="movdireita()">
@@ -54,8 +57,8 @@
 </header>
 
 <body>
-<div class="wapper">
-    <div class="container">
+<div class="wapperjogo">
+    <div class="containerjogo">
             <div id="container-palavra">
                 <div id="palavra"></div>
             </div>
@@ -64,11 +67,11 @@
                 <p>As regras do jogo são simples:</p>
                 <ul>
                     <li>Digite uma letra por vez</li>
-                    <li>Você só poderá errar XX vezes</li>
-                    <li>Caso queira arriscar acertar a palavra, o erro fará perder o jogo e o acerto a ganhar</li>
+                    <li>Você só poderá errar 5 vezes</li>
                     <li>Não há diferença entre letras maiúsculas e minúsculas</li>
                 </ul>
                 <button id="jogar" onclick="sumir()">Vamos jogar</button>
+                <br>
                 <button id="termos" onclick="aparecer()">Ler termos e serviços</button>
                 <div id="containertermo">
                     Não temos termos e serviços XD
@@ -77,13 +80,13 @@
             </div>
             <div id="container-central">
                 <div id="container-vitoria">
-                    <h2>Parábens você venceu o jogo</h2>
+                    <h2>Parabéns você venceu o jogo</h2>
                     <div id="container-imgvitoria"></div>
                     
                 </div>
                 <div id="container-derrota">
-                    <h2>infelizmente você perdeu no jogo</h2>
-                    <div id="container-imgderrota"></div>
+                    <h2>infelizmente você perdeu</h2>
+                    <img src="peixequandoerra.png" alt="">
                 </div>
                 <div id="container-info">
                     <h1>Tentativas</h1>
@@ -98,29 +101,34 @@
                     <p id="texto">Digite primeiro a palavra secreta</p>
                     
                     <input type="text" id="chute" placeholder="Digite nesse campo"/>
-                    <button id="verificar" onclick="verificar();limparInput()">Verificar</button>
+                    <br>
+                    <button id="verificar" onclick="verificar();limparInput()">Inserir</button>
                 </div>
             </div>
     </div>
 </div>
     <div class="footer">© Direitos reservados aos Leandrin de Recife e Chinco Winko</div>
-    <script src="jogodaforca.js"></script>
+<script src="jogodaforca.js">
+</script>
+<script>
+    const fundo1=document.getElementById('fundo')
+    const fundo2=document.getElementById('fundo2')
+    function movdireita(){
 
-    <script>
-        function movdireita(){
+    fundo1.style.transform='translateX(100%)'
+    fundo1.style.opacity='0'
+    fundo2.style.transform='translateX(100%)'
+    fundo2.style.opacity='1'
 
-        fundo.style.transform='translateX(100%)'
-        fundo.style.opacity='0'
-        fundo2.style.transform='translateX(100%)'
-        fundo2.style.opacity='1'
+    }
+    function movesquerda(){
+    fundo2.style.transform='translateX(0%)'
+    fundo2.style.opacity='0'
+    fundo1.style.transform='translateX(0%)'
+    fundo1.style.opacity='1'
+    }
 
-        }
-        function movesquerda(){
-        fundo2.style.transform='translateX(0%)'
-        fundo2.style.opacity='0'
-        fundo.style.transform='translateX(0%)'
-        fundo.style.opacity='1'
-        }
+
     </script>
 </body>
 </html>
